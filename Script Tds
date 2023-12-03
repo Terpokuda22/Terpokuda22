@@ -1,0 +1,88 @@
+repeat wait() until game:IsLoaded()
+getgenv().IsMultiStrat = true
+
+getgenv().Maps = {["Crystal Cave"] = {"Shotgunner", "DJ Booth", "Commander", "Soldier", "Farm"},["Night Station"] = {"Shotgunner", "DJ Booth", "Commander", "Soldier", "Farm"},["Portland"] = {"Shotgunner", "DJ Booth", "Commander", "Soldier", "Farm"},["Winter Abyss"] = {"Shotgunner", "DJ Booth", "Commander", "Soldier", "Farm"}}--Enter the correct info. Map, then units. If no unit in slot, write, "nil" Follow format to add more maps
+maplist = {"Crystal Cave","Night Station","Portland","Winter Abyss"}
+
+if game.PlaceId == 3260590327 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/asjhxnjfdStratFunJoin", true))()
+end
+
+if game.PlaceId == 5591597781 then
+    map = game:GetService("ReplicatedStorage").State.Map.Value
+    game:GetService("Players").PlayerAdded:Connect(function() --back to lobby if it detected player join the game
+        game:GetService("TeleportService"):Teleport(3260590327)
+        wait(10)
+    end)
+    for i,v in pairs(game:GetService("Players"):GetPlayers()) do --back to lobby if there is more than 1 player
+        if i==2 then
+            game:GetService("TeleportService"):Teleport(3260590327)
+            wait(10)
+        end
+    end
+    if map == maplist[1] then
+print([[
+
+--> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+--> 2. Make sure to give this strat a thumbs up if you enjoy it!
+Strat by:  		Gradymeister#3270
+MultiStrat by:  		Gradymeister#3270 :>
+]])
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))() 
+TDS:Loadout("Shotgunner", "DJ Booth", "Commander", "Soldier", "Farm") 
+TDS:Map("Crystal Cave", true, "Survival")
+TDS:Mode('Normal')
+task.spawn(function()
+    wait(1)
+    for i,v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+            v.Text = "Strat By: Gradymeister#3270"
+        end
+    end
+end)
+TDS:Place('Soldier', -31.01143455505371, 8.298922538757324, 36.22587585449219, 0, 0, 10)--1
+TDS:Place('Farm', -10.42957878112793, 8.298919677734375, 26.344511032104492, 0, 0, 9)--2 farm 1
+TDS:Place('Soldier', -31.023313522338867, 8.298921585083008, 33.19341278076172, 2, 0, 59)--3
+TDS:Upgrade(2, 2, 0, 4)--farm(1) U (1) Gradymeister#3270
+TDS:Upgrade(2, 3, 0, 4)--farm(1) U (2)
+TDS:Place('Soldier', -34.107276916503906, 8.298921585083008, 34.943912506103516, 4, 0, 59)--4
+TDS:Upgrade(2, 5, 0, 4)--farm(1) U (3)
+TDS:Place('Farm', -10.084951400756836, 8.298920631408691, 29.477733612060547, 5, 0, 4)--5 farm 2
+TDS:Place('Soldier', -24.076019287109375, 8.298919677734375, 25.012866973876953, 6, 0, 59)--6
+TDS:Upgrade(5, 6, 0, 4)--farm(2) U (1)
+TDS:Upgrade(5, 6, 0, 4)--farm(2) U (2)
+TDS:Place('Shotgunner', -31.026382446289062, 8.298919677734375, 27.32350730895996, 7, 0, 59)--7
+TDS:Upgrade(7, 7, 0, 59)--Shot(1) U (1)
+TDS:Upgrade(5, 7, 0, 4)--farm(2) U (3)
+TDS:Upgrade(7, 8, 0, 4)--Shot(1) U (2)Gradymeister#3270
+TDS:Place('Farm', -10.001607894897461, 8.298921585083008, 32.62492370605469, 8, 0, 4)--8 farm 3
+TDS:Upgrade(8, 8, 0, 3)--farm(3) U (1)
+TDS:Upgrade(8, 9, 0, 59)--farm(3) U (2)
+TDS:Upgrade(8, 9, 0, 4)--farm(3) U (3)
+TDS:Place('Farm', -10.033451080322266, 8.298921585083008, 35.74806594848633, 9, 0, 4)--9 farm 4
+TDS:Upgrade(9, 9, 0, 3)--farm(4) U (1)
+TDS:Place('Shotgunner', -30.876256942749023, 8.298919677734375, 22.238662719726562, 10, 0, 59)--10
+TDS:Upgrade(10, 10, 0, 59)--Shot(2) U (1)
+TDS:Upgrade(10, 10, 0, 59)--Shot(2) U (2)
+TDS:Upgrade(9, 10, 0, 4)--farm(4) U (2)
+TDS:Place('Farm', -10.070344924926758, 8.298921585083008, 38.841373443603516, 10, 0, 4)--11 farm 5
+TDS:Upgrade(11, 10, 0, 3)--farm(5) U (1)
+TDS:Upgrade(11, 11, 0, 59)--farm(5) U (2)Gradymeister#3270
+TDS:Upgrade(9, 11, 0, 59)--farm(4) U (3)
+TDS:Upgrade(11, 11, 0, 4)--farm(5) U (3)
+TDS:Place('Shotgunner', -34.04347229003906, 8.298919677734375, 27.312774658203125, 12, 0, 59)--12
+TDS:Upgrade(12, 12, 0, 59)--Shot(3) U (1)
+TDS:Upgrade(12, 12, 0, 59)--Shot(3) U (2)
+TDS:Place('Shotgunner', -33.89471435546875, 8.298919677734375, 22.25078010559082, 12, 0, 58)--13
+TDS:Upgrade(13, 12, 0, 57)--Shot(4) U (1)Gradymeister#3270
+TDS:Place('Farm', -13.514816284179688, 8.298919677734375, 25.622665405273438, 12, 0, 4)--14 farm 6
+TDS:Upgrade(14, 12, 0, 4)--farm(6) U (1)
+TDS:Upgrade(14, 12, 0, 3)--farm(6) U (2)
+TDS:Upgrade(14, 12, 0, 2)--farm(6) U (3)Gradymeister#3270
+TDS:Upgrade(13, 13, 0, 59)--Shot(4) U (2)
+TDS:Place('Farm', -13.238472938537598, 8.298921585083008, 37.116676330566406, 13, 0, 59)--15 farm 7
+TDS:Upgrade(15, 13, 0, 58)--farm(7) U (1)
+TDS:Upgrade(15, 13, 0, 57)--farm(7) U (2)
+TDS:Place('Farm', -13.298367500305176, 8.298921585083008, 40.2027702331543, 13, 0, 4)--16 farm 8
+TDS:Upgrade(15, 1
